@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2_sum_innerHTML</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>
+        Changing the innerHTML property of an HTML element is a common way to
+        display data in HTML.
+      </h2>
+      <p id="demo">5+6 = ? Click the button.</p>
+      <button onclick="pressed()">Show answer</button>
+    </div>
+    <script>
+      function pressed() {
+        document.getElementById("demo").innerHTML = `Answer is ${5 + 6}`;
+      }
+    </script>
+  </body>
+</html>
