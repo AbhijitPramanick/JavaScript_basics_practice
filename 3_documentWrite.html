@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3_documentWrite</title>
+  </head>
+  <body>
+    <h2>
+      Never call document.write after the document has finished loading. It will
+      overwrite the whole document.
+    </h2>
+    <p id="demo">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit illo porro,
+      libero error aspernatur repudiandae. Necessitatibus, exercitationem id
+      error tempore inventore nihil laudantium.
+    </p>
+    <button onclick="pressed()">Click here</button>
+    <script>
+      function pressed() {
+        document.write(
+          "<p>Document.write has been implemented.</p>\
+            <h2>Hence, Never call document.write after the document has finished loading. It will overwrite the whole document.<br>\
+                Using document.write() after an HTML document is loaded, will delete all existing HTML</h2>"
+        );
+      }
+    </script>
+  </body>
+</html>
