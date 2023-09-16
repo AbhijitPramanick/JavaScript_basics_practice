@@ -1,0 +1,29 @@
+<!-- Using window.alert()
+You can use an alert box to display data: -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WindowAlert</title>
+  </head>
+  <body>
+    <h2>Using window.alert() You can use an alert box to display data:</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem,
+      architecto.
+    </p>
+    <button onclick="pressed()">Click here</button>
+    <script>
+      function pressed() {
+        // window.alert("Hey You have clicked the button.");
+
+        // You can skip the window keyword.
+
+        // In JavaScript, the window object is the global scope object. This means that variables, properties, and methods by default belong to the window object. This also means that specifying the window keyword is optional:
+
+        alert("Hey You have clicked the button.");
+      }
+    </script>
+  </body>
+</html>
