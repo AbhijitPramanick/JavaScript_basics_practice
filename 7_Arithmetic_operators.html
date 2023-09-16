@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arithmetic Operators</title>
+  </head>
+  <body>
+    <h1>Operators in JavaScript</h1>
+
+    <p id="demo">Answer wil be shown here</p>
+    <button onclick="pressed()">Click here</button>
+    <script>
+      function pressed() {
+        document.getElementById("demo").innerHTML = `5+6 = ${5 + 6}<br>5-6 = ${
+          5 - 6
+        }<br>5/6 = ${5 / 6}<br>5*6 = {5*6}<br>5%6 = {5%6}<br>`;
+      }
+    </script>
+  </body>
+</html>

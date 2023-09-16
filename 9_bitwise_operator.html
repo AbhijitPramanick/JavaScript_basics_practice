@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bitwise Operators</title>
+  </head>
+  <body>
+    <h2>Bitwise Operator</h2>
+    <p id="demo">Answer will be displayed here</p>
+    <button onclick="pressed()">Click here</button>
+    <script>
+      function pressed() {
+        document.getElementById("demo").innerHTML = `5^6 = ${5 ^ 6}<br>5&6 = ${
+          5 & 6
+        }<br>5|6 = ${5 | 6}<br>5>>1 = ${5 >> 1}<br>5<<1 = ${
+          5 << 1
+        }<br>~5 = ${~5}<br>5>>>1 = ${5 >>> 1}`;
+      }
+    </script>
+  </body>
+</html>
