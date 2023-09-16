@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>1 Click and change</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>
+        Demonstration of clicking a button and changing the innerHTML of a
+        paragraph
+      </h2>
+      <p id="demo">I am a pargarpah. CLick the following button to change me</p>
+      <button class="clickme" onclick="clicked()">CLick me</button>
+    </div>
+    <script>
+      function clicked() {
+        document.getElementById("demo").innerHTML =
+          "Modified Paragraph upon click of the button.";
+      }
+    </script>
+  </body>
+</html>
