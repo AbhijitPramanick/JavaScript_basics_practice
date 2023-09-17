@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Assignment Operators</title>
+  </head>
+  <body>
+    <div class="container">
+      <h2>Assingment Operators</h2>
+      <h3>
+        JavaScript Assignment Operators Assignment operators assign values to
+        JavaScript variables.
+      </h3>
+      <h3>x = 5, y = true</h3>
+      <p id="demo">Answers will be displayed here upon clicking the button</p>
+      <button onclick="seeVal()">x = ?</button>
+      <div class="section1">
+        <button onclick="addVal()">x += 6</button>
+        <button onclick="subval()">x -= 6</button>
+        <button onclick="multiply()">x *= 7</button>
+        <button onclick="divide()">x /= 14</button>
+      </div>
+      <div class="section2">
+        <button onclick="expVal()">x **= 3</button>
+        <button onclick="modulo()">x %= 10</button>
+        <button onclick="rightShift()">x>>=1</button>
+        <button onclick="leftShift()">x<<=1</button>
+      </div>
+      <div class="section3">
+        <button onclick="bitOr()">x |= 15</button>
+        <button onclick="bitAnd()">x &= 15</button>
+        <button onclick="bitXor()">x ^= 15</button>
+      </div>
+      <button onclick="checkVal()">y = ?</button>
+      <div class="section4">
+        <button onclick="logicalOr()">y||='true'</button>
+        <button onclick="logicalAnd()">y&&='true'</button>
+      </div>
+    </div>
+
+    <script>
+      let x = 5;
+      let y = true;
+      function seeVal() {
+        document.getElementById("demo").innerHTML = `x = ${x}`;
+      }
+      function addVal() {
+        x += 6;
+        document.getElementById(
+          "demo"
+        ).innerHTML = `x += 6 results in x = ${x}`;
+      }
+      function subval() {
+        x -= 6;
+        document.getElementById(
+          "demo"
+        ).innerHTML = `x -= 6; results in x = ${x}`;
+      }
+      function multiply() {
+        x *= 7;
+        document.getElementById(
+          "demo"
+        ).innerHTML = `x *= 7 results in x = ${x}`;
+      }
+      function divide() {
+        x /= 14;
+        document.getElementById(
+          "demo"
+        ).innerHTML = `x /= 14 results in x = ${x}`;
+      }
+      function expVal() {
+        x **= 3;
+        document.getElementById(
+          "demo"
+        ).innerHTML = `x **= 3 results in x = ${x}`;
+      }
+      function modulo() {
+        x %= 10;
+        document.getElementById(
+          "demo"
+        ).innerHTML = `x %= 10 results in x = ${x}`;
+      }
+      function rightShift() {
+        x >>= 1;
+        document.getElementById(
+          "demo"
+        ).innerHTML = `x >>= 1 results in x = ${x}`;
+      }
+      function leftShift() {
+        x <<= 1;
+        document.getElementById(
+          "demo"
+        ).innerHTML = `x <<= 1 results in x = ${x}`;
+      }
+      function bitOr() {
+        x |= 15;
+        document.getElementById(
+          "demo"
+        ).innerHTML = `x |= 15 results in x = ${x}`;
+      }
+      function bitAnd() {
+        x &= 15;
+        document.getElementById(
+          "demo"
+        ).innerHTML = `x &= 15 results in x = ${x}`;
+      }
+      function bitXor() {
+        x ^= 15;
+        document.getElementById(
+          "demo"
+        ).innerHTML = `x ^= 15 results in x = ${x}`;
+      }
+      function checkVal() {
+        document.getElementById("demo").innerHTML = `y = ${y}`;
+      }
+      function logicalOr() {
+        y ||= true;
+        document.getElementById(
+          "demo"
+        ).innerHTML = `y||=true results in y = &{y}`;
+      }
+      function logicalAnd() {
+        y &&= true;
+        document.getElementById(
+          "demo"
+        ).innerHTML = `y&&=true results in y = &{y}`;
+      }
+    </script>
+  </body>
+</html>

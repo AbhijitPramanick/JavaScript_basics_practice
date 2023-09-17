@@ -12,9 +12,13 @@
     <button onclick="pressed()">Click here</button>
     <script>
       function pressed() {
-        document.getElementById("demo").innerHTML = `5+6 = ${5 + 6}<br>5-6 = ${
-          5 - 6
-        }<br>5/6 = ${5 / 6}<br>5*6 = {5*6}<br>5%6 = {5%6}<br>`;
+        document.getElementById("demo").innerHTML = `Addition: 5+6 = ${
+          5 + 6
+        }<br>Subtraction: 5-6 = ${5 - 6}<br>Division: 5/6 = ${
+          5 / 6
+        }<br>Multiplication: 5*6 = ${5 * 6}<br>Modulus: 5%6 = ${
+          5 % 6
+        }<br>Exponentiation: 5**2 = ${5 ** 2}`;
       }
     </script>
   </body>
