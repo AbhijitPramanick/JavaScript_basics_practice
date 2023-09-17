@@ -32,16 +32,39 @@
         <button onclick="bitAnd()">x &= 15</button>
         <button onclick="bitXor()">x ^= 15</button>
       </div>
+      <h2>
+        The ||= Operator The Logical OR assignment operator is used between two
+        values.
+      </h2>
+      <h3>If the first value is false, the second value is assigned.</h3>
+      <h2>
+        The &&= Operator The Logical AND assignment operator is used between two
+        values.
+      </h2>
+      <h3>If the first value is true, the second value is assigned.</h3>
+      <h4>The &&= operator and ||= operator are ES2020 features.</h4>
+
       <button onclick="checkVal()">y = ?</button>
+      <button onclick="checkValz()">z = ?</button>
       <div class="section4">
         <button onclick="logicalOr()">y||='true'</button>
         <button onclick="logicalAnd()">y&&='true'</button>
       </div>
+      <h2>
+        The ??= Operator The Nullish coalescing assignment operator is used
+        between two values.
+      </h2>
+      <h3>
+        If the first value is undefined or null, the second value is assigned.
+      </h3>
+      <h4>The ??= operator is an ES2020 feature.</h4>
+      <button onclick="nullishCo()">z&&='true'</button>
     </div>
 
     <script>
       let x = 5;
       let y = true;
+      let z = null;
       function seeVal() {
         document.getElementById("demo").innerHTML = `x = ${x}`;
       }
@@ -114,17 +137,26 @@
       function checkVal() {
         document.getElementById("demo").innerHTML = `y = ${y}`;
       }
+      function checkValz() {
+        document.getElementById("demo").innerHTML = `z = ${z}`;
+      }
       function logicalOr() {
         y ||= true;
         document.getElementById(
           "demo"
-        ).innerHTML = `y||=true results in y = &{y}`;
+        ).innerHTML = `y||=true results in y = ${y}`;
       }
       function logicalAnd() {
         y &&= true;
         document.getElementById(
           "demo"
-        ).innerHTML = `y&&=true results in y = &{y}`;
+        ).innerHTML = `y&&=true results in y = ${y}`;
+      }
+      function nullishCo() {
+        z ??= true;
+        document.getElementById(
+          "demo"
+        ).innerHTML = `z??=true results in z = ${z}`;
       }
     </script>
   </body>
