@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Datatypes</title>
+  </head>
+  <body>
+    <h1>JavaScript Datatypes</h1>
+    <div class="list">
+      <ul>
+        <li>Strings</li>
+        <li>Number</li>
+        <li>BigInt</li>
+        <li>Boolean</li>
+        <li>Undefined</li>
+        <li>Null</li>
+        <li>Symbol</li>
+        <li>Object</li>
+      </ul>
+      <h3>Object Datatypes</h3>
+      <ul>
+        <li>Object</li>
+        <li>Array</li>
+        <li>Date</li>
+      </ul>
+    </div>
+    <div class="section1">
+      <h3>
+        Note When adding a number and a string, JavaScript will treat the number
+        as a string.
+      </h3>
+      <p>let x = 16 + "Volvo";</p>
+      <p id="demoadd1">
+        Answer will be shown here, upon clicking the following button
+      </p>
+      <button onclick="add1()">16 + "Volvo"</button>
+      <p>let x = "Volvo" + 16;</p>
+      <p id="demoadd2">
+        Answer will be shown here, upon clicking the following button
+      </p>
+      <button onclick="add2()">"Volvo" + 16</button>
+      <h3>
+        JavaScript evaluates expressions from left to right. Different sequences
+        can produce different results:
+      </h3>
+      <p>let x = 16 + 4 + "Volvo";</p>
+      <p id="demoadd3">
+        Answer will be shown here, upon clicking the following button
+      </p>
+      <button onclick="add3()">16 + 4 + "Volvo"</button>
+      <p>let x = "Volvo" + 16 + 4;</p>
+      <p id="demoadd4">
+        Answer will be shown here, upon clicking the following button
+      </p>
+      <button onclick="add4()">"Volvo" + 16 + 4</button>
+      <p>
+        In the first example, JavaScript treats 16 and 4 as numbers, until it
+        reaches "Volvo".In the second example, since the first operand is a
+        string, all operands are treated as strings.
+      </p>
+    </div>
+
+    <div class="section2">
+      <h3>
+        JavaScript Types are Dynamic JavaScript has dynamic types. This means
+        that the same variable can be used to hold different data types.
+      </h3>
+    </div>
+    <div class="section3">
+      <h3>
+        JavaScript Numbers All JavaScript numbers are stored as decimal numbers
+        (floating point). Numbers can be written with, or without decimals.
+      </h3>
+      <p>Note Most programming languages have many number types:</p>
+      <p>
+        Whole numbers (integers): byte (8-bit), short (16-bit), int (32-bit),
+        long (64-bit)
+      </p>
+      <p>Real numbers (floating-point): float (32-bit), double (64-bit).</p>
+      <p>
+        Javascript numbers are always one type: double (64-bit floating point).
+      </p>
+    </div>
+    <div class="section4">
+      <h3>JavaScript BigInt</h3>
+      <h4>
+        All JavaScript numbers are stored in a a 64-bit floating-point format.
+        JavaScript BigInt is a new datatype (ES2020) that can be used to store
+        integer values that are too big to be represented by a normal JavaScript
+        Number.
+      </h4>
+      <p>let x = BigInt("123456789012345678901234567890");</p>
+      <p id="demobigint5">
+        Answer will be shown here, upon clicking the following button
+      </p>
+      <button onclick="bigint5()">
+        let x = BigInt("123456789012345678901234567890");
+      </button>
+      <p>
+        In the first example, JavaScript treats 16 and 4 as numbers, until it
+        reaches "Volvo".In the second example, since the first operand is a
+        string, all operands are treated as strings.
+      </p>
+    </div>
+    <div class="section5">
+      <h3>
+        JavaScript Booleans Booleans can only have two values: true or false.
+      </h3>
+      <h3>
+        JavaScript Arrays JavaScript arrays are written with square brackets.
+        Array items are separated by commas.
+      </h3>
+      <p>
+        Array indexes are zero-based, which means the first item is [0], second
+        is [1], and so on.
+      </p>
+      <h3>
+        JavaScript Objects JavaScript objects are written with curly braces {}.
+        Object properties are written as name:value pairs, separated by commas.
+      </h3>
+      <h3>
+        The typeof Operator You can use the JavaScript typeof operator to find
+        the type of a JavaScript variable. The typeof operator returns the type
+        of a variable or an expression:
+      </h3>
+      <h3>
+        Undefined In JavaScript, a variable without a value, has the value
+        undefined. The type is also undefined. Any variable can be emptied, by
+        setting the value to undefined. The type will also be undefined.
+      </h3>
+    </div>
+
+    <script>
+      function add1() {
+        let x = 16 + "Volvo";
+        document.getElementById("demoadd1").innerHTML = x;
+      }
+      function add2() {
+        let x = "Volvo" + 16;
+        document.getElementById("demoadd2").innerHTML = x;
+      }
+      function add3() {
+        let x = 16 + 4 + "Volvo";
+        document.getElementById("demoadd3").innerHTML = x;
+      }
+      function add4() {
+        let x = "Volvo" + 16 + 4;
+        document.getElementById("demoadd4").innerHTML = x;
+      }
+      function bigint5() {
+        let x = BigInt("123456789012345678901234567890");
+        document.getElementById("demobigint5").innerHTML = x;
+      }
+    </script>
+  </body>
+</html>
