@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Functions in JS</title>
+  </head>
+  <body>
+    <h1>Functions in JavaScript</h1>
+    <p id="demo1">Answer will be shown here. Click the following button</p>
+    <button onclick="pressed1()">Click function content</button>
+    <p id="demo2">Answer will be shown here. Click the following button</p>
+    <button onclick="pressed2()">Click for function</button>
+  </body>
+  <script>
+    function myFunc() {
+      let results = "Hello there! I am the content of the myFunc()";
+      return results;
+    }
+    const pressed1 = () => {
+      document.getElementById("demo1").innerHTML = myFunc();
+    };
+    const pressed2 = () => {
+      document.getElementById("demo2").innerHTML = myFunc;
+    };
+  </script>
+</html>
