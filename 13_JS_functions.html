@@ -6,11 +6,42 @@
     <title>Functions in JS</title>
   </head>
   <body>
-    <h1>Functions in JavaScript</h1>
-    <p id="demo1">Answer will be shown here. Click the following button</p>
-    <button onclick="pressed1()">Click function content</button>
-    <p id="demo2">Answer will be shown here. Click the following button</p>
-    <button onclick="pressed2()">Click for function</button>
+    <div class="section1">
+      <h1>Functions in JavaScript</h1>
+      <p id="demo1">Answer will be shown here. Click the following button</p>
+      <button onclick="pressed1()">Click function content</button>
+      <p id="demo2">Answer will be shown here. Click the following button</p>
+      <button onclick="pressed2()">Click for function</button>
+      <p>
+        Function parameters are listed inside the parentheses () in the function
+        definition.<br />
+
+        Function arguments are the values received by the function when it is
+        invoked.<br />
+
+        Inside the function, the arguments (the parameters) behave as local
+        variables.
+      </p>
+    </div>
+    <div class="section2">
+      <h3>Function Invocation</h3>
+      <p>
+        The code inside the function will execute when "something" invokes
+        (calls) the function:
+      </p>
+      <ul>
+        <li>When an event occurs (when a user clicks a button)</li>
+        <li>When it is invoked (called) from JavaScript code</li>
+        <li>Automatically (self invoked)</li>
+      </ul>
+    </div>
+    <button id="tempConv"><h3>Reveal Temp conversion</h3></button>
+    <div id="section3" style="display: none">
+      <p id="demoTempConv">
+        Temperature conversion Results display here. Click the following button
+      </p>
+      <button onclick="pressed3()">Convert Temperature</button>
+    </div>
   </body>
   <script>
     function myFunc() {
@@ -23,5 +54,21 @@
     const pressed2 = () => {
       document.getElementById("demo2").innerHTML = myFunc;
     };
+    const tempConvBtn = document.getElementById("tempConv");
+    tempConvBtn.addEventListener("click", () => {
+      const sec3 = document.getElementById("section3");
+      if (sec3.style.display == "none") {
+        sec3.style.display = "block";
+      } else {
+        sec3.style.display = "none";
+      }
+    });
+    function pressed3() {
+      const tempFahrenheit = 45;
+      const tempCelcius = (5 / 9) * (tempFahrenheit - 32);
+      document.getElementById(
+        "demoTempConv"
+      ).innerHTML = `Temperature in Farenheit = ${tempFahrenheit}<br>Temperature in Celcius = ${tempCelcius}`;
+    }
   </script>
 </html>
