@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS_objects</title>
+  </head>
+  <body>
+    <h2>Objects in JavaScript</h2>
+    <p id="demo1">
+      Click the following button to reveal the contents of the object.
+    </p>
+    <button onclick="reveal()">Click here</button>
+    <p id="demo2">
+      Click the following button to reveal the contents of the object.
+    </p>
+    <button onclick="reveal2()">Click here</button>
+    <script>
+      function reveal() {
+        const person = {
+          firstName: "Abhijit",
+          lastName: "Pramanick",
+          job: "Web developer",
+          dept: "Service",
+        };
+        document.getElementById(
+          "demo1"
+        ).innerText = `I am ${person.firstName} ${person.lastName}, a ${person.job} in ${person.dept} department.`;
+      }
+      function reveal2() {
+        const person = {
+          firstName: "Abhijit",
+          lastName: "Pramanick",
+          job: "Web developer",
+          dept: "Service",
+          fullName: function () {
+            return this.firstName + " " + this.lastName;
+          },
+        };
+        document.getElementById(
+          "demo2"
+        ).innerText = `I am ${person.fullName()}, a ${person.job} in ${
+          person.dept
+        } department.`;
+      }
+    </script>
+  </body>
+</html>
