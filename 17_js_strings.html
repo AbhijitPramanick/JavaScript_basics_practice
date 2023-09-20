@@ -14,12 +14,33 @@
     </p>
     <p id="demo">Text will be printed here</p>
     <p id="textLength">Text Length will be printed here</p>
+    <p id="demoQuotationMarks">
+      Demonstration of validation of single and double quotation marks used in
+      JS
+    </p>
+    <p id="escChar">Text Length will be printed here</p>
+    <h4>
+      The 6 escape characters above were originally designed to control
+      typewriters, teletypes, and fax machines. They do not make any sense in
+      HTML.
+    </h4>
     <button onclick="modify()">Click here</button>
     <script>
       function modify() {
+        //Printing text and length of text in the html.
         let text = "Abhijit Pramanick";
         document.getElementById("demo").innerHTML = text;
         document.getElementById("textLength").innerHTML = text.length;
+
+        //Usage of single and double quotation marks
+        let carName1 = "Tesla";
+        let carName2 = "Maruti";
+        document.getElementById("demoQuotationMarks").innerHTML =
+          carName1 + " " + carName2;
+
+        //Demontrsation of Escape character
+        let text2 = 'We are the so-called "Vikings" from the north.';
+        document.getElementById("escChar").innerHTML = text2;
       }
     </script>
   </body>
