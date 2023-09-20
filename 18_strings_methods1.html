@@ -1,0 +1,152 @@
+<!-- Strings methods : length, slice, Subtring, substr -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Strings methods</title>
+  </head>
+  <body>
+    <h1>String methods in JS</h1>
+    <div class="container">
+      <h2>Length method</h2>
+      <p id="demo1">1. Length of "ABCDEFGHIJKLMNOPQRSTUVWXYZ" : text.length</p>
+      <button onclick="demoFn1()">Click here</button>
+      <!-- 26 -->
+      <p id="demo2">2. Slice of "Apple, Banana, Kiwi" : text.slice(7, 13)</p>
+      <button onclick="demoFn2()">Click here</button>
+      <!-- Banana -->
+      <p id="demo3">3. Slice of "Apple, Banana, Kiwi" : text.slice(7)</p>
+      <button onclick="demoFn3()">Click here</button>
+      <!-- Banana, Kiwi -->
+      <p id="demo4">4. Slice of "Apple, Banana, Kiwi" : text.slice(-12)</p>
+      <button onclick="demoFn4()">Click here</button>
+      <!-- Banana, Kiwi -->
+      <p id="demo5">5. Slice of "Apple, Banana, Kiwi" : text.slice(-12,-6)</p>
+      <button onclick="demoFn5()">Click here</button>
+      <!-- Banana -->
+      <h2>Substring method</h2>
+      <p id="demo6">
+        6. Substring of "Apple, Banana, Kiwi" : text.substring(7, 13)
+      </p>
+      <button onclick="demoFn6()">Click here</button>
+      <!-- Banana -->
+      <p id="demo7">
+        7. Substring of "Apple, Banana, Kiwi" : text.substring(7)
+      </p>
+      <button onclick="demoFn7()">Click here</button>
+      <!-- Banana, Kiwi -->
+      <p id="demo8">
+        8. Substring of "Apple, Banana, Kiwi" : text.substring(-12)
+      </p>
+      <button onclick="demoFn8()">Click here</button>
+      <!-- Apple, Banana, Kiwi -->
+      <p id="demo9">
+        9. Substring of "Apple, Banana, Kiwi" : text.substring(-12,-6)
+      </p>
+      <button onclick="demoFn9()">Click here</button>
+      <!-- "" -->
+      <h2>Substr method</h2>
+      <p id="demo10">
+        10. substr of "Apple, Banana, Kiwi" : text.substr(7, 13)
+      </p>
+      <button onclick="demoFn10()">Click here</button>
+      <!-- Banana -->
+      <p id="demo11">11. substr of "Apple, Banana, Kiwi" : text.substr(7)</p>
+      <button onclick="demoFn11()">Click here</button>
+      <!-- Banana, Kiwi -->
+      <p id="demo12">12. substr of "Apple, Banana, Kiwi" : text.substr(-12)</p>
+      <button onclick="demoFn12()">Click here</button>
+      <!-- Banana, Kiwi -->
+      <p id="demo13">
+        13. substr of "Apple, Banana, Kiwi" : text.substr(-12,-6)
+      </p>
+      <button onclick="demoFn13()">Click here</button>
+      <!-- "" -->
+      <h3>
+        ✔ The two parameters of substr() are start and length , while for
+        substring() , they are start and end . substr() 's start index will wrap
+        to the end of the string if it is negative, while substring() will clamp
+        it to 0 .
+      </h3>
+      <p id="demo14">14. substr of "Apple, Banana, Kiwi" : text.substr(-12)</p>
+      <button onclick="demoFn14()">Click here</button>
+      <!-- Banana, Kiwi -->
+      <p id="demo15">
+        15. substr of "Apple, Banana, Kiwi" : text.substr(-12,6)
+      </p>
+      <button onclick="demoFn15()">Click here</button>
+      <!-- Banana -->
+      <h3>
+        ✔ Negative lengths in substr() are treated as zero, while substring()
+        will swap the two indexes if end is less than start.
+      </h3>
+      <p id="demo16">
+        16. substr of "Apple, Banana, Kiwi" : text.substr(12,-3)
+      </p>
+      <button onclick="demoFn16()">Click here</button>
+      <!-- "" -->
+      <p id="demo17">
+        17. Substring of "Apple, Banana, Kiwi" : text.substring(-12,6)
+      </p>
+      <button onclick="demoFn17()">Click here</button>
+      <!-- Apple, -->
+    </div>
+    <script>
+      let text1 = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+      let text2 = "Apple, Banana, Kiwi";
+      function demoFn1() {
+        document.getElementById("demo1").innerHTML = text1.length;
+      }
+      function demoFn2() {
+        document.getElementById("demo2").innerHTML = text2.slice(7, 13);
+      }
+      function demoFn3() {
+        document.getElementById("demo3").innerHTML = text2.slice(7);
+      }
+      function demoFn4() {
+        document.getElementById("demo4").innerHTML = text2.slice(-12);
+      }
+      function demoFn5() {
+        document.getElementById("demo5").innerHTML = text2.slice(-12, -6);
+      }
+      function demoFn6() {
+        document.getElementById("demo6").innerHTML = text2.substring(7, 13);
+      }
+      function demoFn7() {
+        document.getElementById("demo7").innerHTML = text2.substring(7);
+      }
+      function demoFn8() {
+        document.getElementById("demo8").innerHTML = text2.substring(-12);
+      }
+      function demoFn9() {
+        document.getElementById("demo9").innerHTML = text2.substring(-12, -6);
+      }
+      function demoFn10() {
+        document.getElementById("demo10").innerHTML = text2.substr(7, 13);
+      }
+      function demoFn11() {
+        document.getElementById("demo11").innerHTML = text2.substr(7);
+      }
+      function demoFn12() {
+        document.getElementById("demo12").innerHTML = text2.substr(-12);
+      }
+      function demoFn13() {
+        document.getElementById("demo13").innerHTML = text2.substr(-12, -6);
+      }
+      function demoFn14() {
+        document.getElementById("demo14").innerHTML = text2.substr(-12);
+      }
+      function demoFn15() {
+        document.getElementById("demo15").innerHTML = text2.substr(-12, 6);
+      }
+      function demoFn16() {
+        document.getElementById("demo16").innerHTML = text2.substr(12, -3);
+      }
+      function demoFn17() {
+        document.getElementById("demo17").innerHTML = text2.substring(-12, 6);
+      }
+    </script>
+  </body>
+</html>
