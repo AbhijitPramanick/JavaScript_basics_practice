@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS_strings</title>
+  </head>
+  <body>
+    <h1>JS strings</h1>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora, eos
+      totam. Quo minima minus iusto a nam itaque! Deleniti nobis dignissimos
+      quaerat quam.
+    </p>
+    <p id="demo">Text will be printed here</p>
+    <p id="textLength">Text Length will be printed here</p>
+    <button onclick="modify()">Click here</button>
+    <script>
+      function modify() {
+        let text = "Abhijit Pramanick";
+        document.getElementById("demo").innerHTML = text;
+        document.getElementById("textLength").innerHTML = text.length;
+      }
+    </script>
+  </body>
+</html>
