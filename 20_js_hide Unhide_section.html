@@ -1,0 +1,31 @@
+<!-- Write an HTML to demonstrate hide and unhide section of JS -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hide_unhide</title>
+  </head>
+  <body>
+    <h1>Hide unhide element of HTML</h1>
+    <p id="demo">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque porro
+      blanditiis ab eligendi a quaerat voluptatum hic, beatae eum nobis, eos
+      animi id assumenda modi, dolorem illum tenetur illo iure odio amet
+      molestiae quidem?
+    </p>
+    <h4>Click the following button to hide and unhide the above paragraph</h4>
+    <button onclick="pressed()">Click me</button>
+    <script>
+      function pressed() {
+        const div = document.getElementById("demo");
+        if (div.style.display != "none") {
+          div.style.display = "none";
+        } else {
+          div.style.display = "block";
+        }
+      }
+    </script>
+  </body>
+</html>
