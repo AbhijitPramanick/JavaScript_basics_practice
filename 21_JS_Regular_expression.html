@@ -1,0 +1,129 @@
+<!-- Regular expression in JavaScript -->
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Regular Expression JS</title>
+  </head>
+  <body>
+    <h1>Regular Expression in JavaScript</h1>
+    <p>
+      A regular expression is a sequence of characters that forms a search
+      pattern. When you search for data in a text, you can use this search
+      pattern to describe what you are searching for. A regular expression can
+      be a single character, or a more complicated pattern.
+    </p>
+    <p id="demo">Answers will be displayed here. Click the following button.</p>
+    <button onClick="pressed()">Click here</button>
+    <!-- ----------------------------------------------------------------------- -->
+    <h2>exec() function</h2>
+    <h3>
+      The exec() Method in JavaScript is used to test for the match in a string.
+      If there is a match this method returns the first match else it returns
+      NULL.
+    </h3>
+    <p>
+      Pupils are attending the class. All the students assembled in the seminar
+      hall, for demonstration of their of there protest against a students bills
+      passed in the state legislative assembly.
+    </p>
+    <p id="demo2">
+      result will be displayed here upon clicking of the following button.
+    </p>
+    <button onClick="pressed2()">exec() function... Click here</button>
+    <!-- ----------------------------------------------------------------------- -->
+    <h2>test() function</h2>
+    <h3>
+      The test() method tests for a match in a string. If it finds a match, it
+      returns true, otherwise it returns false.
+    </h3>
+
+    <p id="demo3">
+      result will be displayed here upon clicking of the following button.
+    </p>
+    <button onClick="pressed3()">test() function... Click here</button>
+    <!-- ----------------------------------------------------------------------- -->
+    <h2>match() function</h2>
+    <h3>
+      The match() method returns an array with the matches. The match() method
+      returns null if no match is found
+    </h3>
+
+    <p id="demo4">
+      result will be displayed here upon clicking of the following button.
+    </p>
+    <button onClick="pressed4()">match() function... Click here</button>
+    <!-- ----------------------------------------------------------------------- -->
+    <h2>search() function</h2>
+    <h3>
+      The search() method returns the index (position) of the first match. The
+      search() method returns -1 if no match is found. The search() method is
+      case sensitive.
+    </h3>
+
+    <p id="demo5">
+      result will be displayed here upon clicking of the following button.
+    </p>
+    <button onClick="pressed5()">search() function... Click here</button>
+    <!-- ----------------------------------------------------------------------- -->
+    <h2>replace() function</h2>
+    <h3>
+      The replace() method searches a string for a value or a regular
+      expression. The replace() method returns a new string with the value(s)
+      replaced.
+    </h3>
+
+    <p id="demo6">
+      result will be displayed here upon clicking of the following button.
+    </p>
+    <button onClick="pressed6()">replace() function... Click here</button>
+    <!-- ----------------------------------------------------------------------- -->
+
+    <script>
+      // regular expresion literals
+      const exp = /student/gi;
+      const sentence =
+        "Pupils are attending the class. All the students assembled in the seminar hall, for demonstration of their of there protest against a Student bill passed in the state legislative assembly.";
+      //printing the regular expression in console
+      console.log(exp);
+      //Printing the content present in the regular expression literal
+      console.log(exp.source);
+
+      function pressed() {
+        document.getElementById("demo").innerHTML = exp;
+        // functions to match expression
+
+        // The exec() Method in JavaScript is used to test for the match in a string. If there is a match this method returns the first match else it returns NULL.
+      }
+      function pressed2() {
+        const result = exp.exec(sentence);
+        console.log(result);
+        document.getElementById("demo2").innerHTML = result;
+      }
+      function pressed3() {
+        const result = exp.test(sentence);
+        console.log(result);
+        document.getElementById("demo3").innerHTML = result;
+      }
+      function pressed4() {
+        // const result = exp.match(sentence); //This is wrong
+        const result = sentence.match(exp); //This is right
+        console.log(result);
+        document.getElementById("demo4").innerHTML = result;
+      }
+      function pressed5() {
+        // const result = exp.search(sentence); //This is wrong
+        const result = sentence.search(exp); //This is right
+        console.log(result);
+        document.getElementById("demo5").innerHTML = result;
+      }
+      function pressed6() {
+        // const result = exp.replace(sentence); //This is wrong
+        const result = sentence.replace(exp, "Coder"); //This is right
+        console.log(result);
+        document.getElementById("demo6").innerHTML = result;
+      }
+    </script>
+  </body>
+</html>
