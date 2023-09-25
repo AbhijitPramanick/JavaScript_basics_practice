@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Numbers in JS</title>
+  </head>
+  <body>
+    <div>
+      <h1>Numbers in JavaScript</h1>
+      <p id="demo1">
+        Answer will be printed here. <br />Click the following button
+      </p>
+      <button onClick="pressed1()">x = 3, y = 3.14, the x+y = ?</button>
+    </div>
+    <script>
+      function pressed1() {
+        const x = 3,
+          y = 3.14;
+        document.getElementById(
+          "demo1"
+        ).innerHTML = `x = ${x}  y = ${y}   <br> x+y = ${x + y}`;
+      }
+    </script>
+  </body>
+</html>

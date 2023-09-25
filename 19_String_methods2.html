@@ -17,19 +17,60 @@
         flag set.
       </h3>
       <p id="demo1">
-        Please visit Microsoft and Microsoft! : text.replace("Microsoft",
+        Please visit Microsoft and microsoft! : text.replace("Microsoft",
         "Amazon")
       </p>
       <button onclick="demoFn1()">text.replace("Microsoft", "Amazon")</button>
       <!-- Please visit Amazon and Microsoft! -->
+      <!-- --------------------------------------------------------------------- -->
+
+      <h2>ReplaceAll method in JS</h2>
+
+      <p id="demo2">
+        Please visit Microsoft and microsoft! : text.replaceAll("Microsoft",
+        "Amazon")
+      </p>
+      <button onclick="demoFn2()">
+        text.replaceAll("Microsoft", "Amazon")
+      </button>
+      <!-- Please visit Amazon and Microsoft! -->
+      <!-- --------------------------------------------------------------------- -->
+
+      <h2>toLowercase() & toUpperCase() method in JS</h2>
+
+      <p id="demo3">
+        Please visit Microsoft and microsoft! : text.toLowercase()
+        &text.toUpperCase()
+      </p>
+      <button onclick="demoFn3()">
+        text.toLowercase("Microsoft", "Amazon")
+      </button>
+      <button onclick="demoFn4()">
+        text.toUpperCase("Microsoft", "Amazon")
+      </button>
+      <!-- Please visit Amazon and Microsoft! -->
+      <!-- --------------------------------------------------------------------- -->
     </div>
     <script>
-      let txt = "Please visit Microsoft and Microsoft!";
+      const txt = "Please visit Microsoft and microsoft!";
+      const txt1 = "Please visit Microsoft and microsoft!";
       function demoFn1() {
         document.getElementById("demo1").innerHTML = txt.replace(
           "Microsoft",
           "Amazon"
         );
+      }
+      function demoFn2() {
+        document.getElementById("demo2").innerHTML = txt1.replaceAll(
+          /Microsoft/gi,
+          "Amazon"
+        );
+      }
+      function demoFn3() {
+        document.getElementById("demo3").innerHTML = txt1.toLowerCase();
+      }
+      function demoFn4() {
+        document.getElementById("demo3").innerHTML = txt1.toUpperCase();
       }
     </script>
   </body>
