@@ -8,10 +8,27 @@
   <body>
     <div>
       <h1>Numbers in JavaScript</h1>
+      <h3>
+        JavaScript has only one type of number. Numbers can be written with or
+        without decimals.
+      </h3>
       <p id="demo1">
         Answer will be printed here. <br />Click the following button
       </p>
       <button onClick="pressed1()">x = 3, y = 3.14, the x+y = ?</button>
+      <!-- --------------------------------------------------------------------- -->
+      <h3>
+        Extra large or extra small numbers can be written with scientific
+        (exponent) notation:
+      </h3>
+      <p id="demo2">
+        Answer will be printed here. <br />Click the following button
+      </p>
+      <button onClick="pressed2()">x = 123e-5, y = 45e2 , the x+y = ?</button>
+      <!-- --------------------------------------------------------------------- -->
+      <h2>Other important topics about numbers in JavaScript</h2>
+      <p>click the button below and see the result in the console</p>
+      <button onClick="pressed3()">click here</button>
     </div>
     <script>
       function pressed1() {
@@ -20,6 +37,120 @@
         document.getElementById(
           "demo1"
         ).innerHTML = `x = ${x}  y = ${y}   <br> x+y = ${x + y}`;
+      }
+      // --------------------------------------------------------------------
+      function pressed2() {
+        const x = 123e-5,
+          y = 45e2;
+        document.getElementById(
+          "demo2"
+        ).innerHTML = `x = ${x}  y = ${y}   <br> x+y = ${x + y}`;
+      }
+      // --------------------------------------------------------------------
+      function pressed3() {
+        const x = 10;
+        console.log(x);
+        console.log(typeof x);
+
+        const y = 10.5;
+        console.log(y);
+        console.log(typeof y);
+
+        const z = 10;
+        const z1 = 10; //becomes integer
+        const z2 = 10.4;
+        console.log(`z = ${z} z1 = ${z1} z2 = ${z2}`);
+
+        // e-notation
+        const p = 2e5;
+        const q = 529e-2;
+        console.log(p, q);
+
+        //Numbers in JS are always stores in floating point number
+        console.log(10 === 10.0);
+        //Floating point numbers in Js are always stored in 64 bit binary format
+        //This means there will be some inaccuracy while performing arithmetic operation.
+        // Floating point arithmetic operations are not always accurate
+
+        console.log(`0.1+0.2 = ${0.1 + 0.2}`);
+        //Hence in JS, doing precision work calculation, like that of scientific calculation is not recommeneded
+
+        // DIFFERENT WAYS OF WRITING NUMBERS IN JS
+        const billion = 10000000000;
+        const billion2 = 1_000_000_000;
+        //Syntactic sugar, JS ignore the underscores in the number
+        console.log(`billion = ${billion} billion2 = ${billion2}`);
+        const billion3 = 1e9;
+        console.log(`billion3 = ${billion3}`);
+
+        //WRITING NUMBERS IN DIFFERENT BASES
+
+        //inorder to write a number in binary format we have to add prefix of 0b to the binary number to be stored
+        const b1 = 0b11111111;
+        console.log(b1); //Decimal value of the binary number has been logged to the console
+
+        //inorder to write a number in octal format we have to add prefix of 0o to the binary number to be stored
+        const b2 = 0o377;
+        console.log(b2);
+        //inorder to write a number in hexadecimal format we have to add prefix of 0x to the binary number to be stored
+        const b3 = 0xff;
+        console.log(b3);
+
+        // converting a number to string
+        const c = 234;
+        let d = c.toString();
+        console.log(d);
+        console.log(typeof d);
+
+        //toString number can also take base number as argument.
+        //toString function will convert the number to first in the base number format and then convert it to the string
+        let d1 = c.toString(2); //binary
+        console.log(d1, typeof d1);
+        d1 = c.toString(8); // octal
+        console.log(d1, typeof d1);
+        d1 = c.toString(16); // hexadecimal
+        console.log(d1, typeof d1);
+
+        //CONVERTING A STRING TO ITS NUMBER TYPE
+        console.log(Number("67"));
+        console.log(+"67"); //type coercion
+
+        //if a string is not a number, the both of the above operators will be failed to convert the string to number and NAN will be displayed
+        console.log(Number("67A"));
+        console.log(+"CB67"); //type coercion
+
+        //EXTRACTING NUMBER FROM A STRING
+        console.log(parseInt("37px"));
+        console.log(parseInt("37.99PX")); // incase of decimal number it will return only the integer part
+
+        //parseFloat will return the decimal part of the floating point number present in the string
+        console.log(parseFloat("3.12347px"));
+
+        //parseInt an dparseFloat will return a number when the string starts with a number, else NAN
+        console.log(parseInt("a37px"));
+        console.log(parseInt("x37.99PX"));
+        console.log(parseFloat("j3.12347px"));
+        console.log(parseInt("134DCX37.99PX"));
+
+        // isNaN() is amethod that converts a value to number then checks whether the number is NaN.
+        console.log(isNaN("hello")); //true
+        console.log(isNaN("45")); //false
+        console.log(isNaN(parseInt("34px"))); //false
+
+        //NaN number is unique and is not equal to anything even itself
+        console.log(Number("ABC") === NaN); //false
+        console.log(NaN === NaN); //false
+
+        //isFinite() method will return true if the string is a regular number otherwise false
+        console.log("isFinite method");
+        console.log(isFinite(Number("15"))); //true
+        console.log(isFinite(Number("15px"))); //false
+        console.log(isFinite(Infinity)); //false
+
+        //onNumber object there exists a method named isInteger(), which returns true if number
+        console.log(Number.isInteger("15")); //false
+        console.log(Number.isInteger(20)); //true
+        console.log(Number.isInteger(20.1)); //false
       }
     </script>
   </body>
