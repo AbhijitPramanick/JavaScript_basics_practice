@@ -8,17 +8,96 @@
   <body>
     <h1>Promises in JavaScript</h1>
     <script>
-      const p = new Promise((resolve, reject) => {
-        resolve("Promise is resolved !!");
-        reject("Promised rejected");
+      //An async function will always return a Promise.
+
+      // async function getData() {
+      //   return "Namaste Duniya";
+      // }
+      // const data = getData();
+      // console.log(data);
+      // data.then((result) => console.log(result));
+
+      // //Creating a promise
+      // const p2 = new Promise((resolve, reject) => {
+      //   resolve("Promise fulfilled");
+      // });
+      // async function getData2() {
+      //   return p2;
+      // }
+      // const data2 = getData2();
+      // console.log(data2);
+      // data2.then((res) => console.log(res));
+
+      // //Async-Await combination
+      // //Await resolves promise
+
+      // const p3 = new Promise((resolve, reject) => {
+      //   resolve("Promise completely resolved");
+      // });
+      // async function handlePromise() {
+      //   const val = await p3;
+      //   console.log(val);
+      // }
+      // handlePromise();
+
+      //In real world, promises are not resolve immediately
+
+      // // Using Async-await
+      // const p4 = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     resolve("Promise resolved completely");
+      //   }, 5000);
+      // });
+      // async function handlePromise2() {
+      //   console.log(p4);
+      //   const val2 = await p4;
+      //   console.log(p4);
+      //   console.log(val2);
+      // }
+      // handlePromise2();
+
+      //Using conventional way of handling promises
+
+      // const p5 = new Promise((resolve, reject) => {
+      //   setTimeout(() => {
+      //     resolve("Promise resolved, hurray!!!");
+      //   }, 3000);
+      // });
+      // async function handlePromise3() {
+      //   return p5;
+      // }
+      // const dataPromise = handlePromise3();
+      // console.log(dataPromise);
+      // dataPromise.then((res) => console.log(res));
+
+      // Experimenting with two promises with different setTimeouts
+      const p_1 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Promise_1 resolved completely");
+        }, 8000);
       });
-      console.log(p);
-      async function getData() {
-        return p;
+
+      const p_2 = new Promise((resolve, reject) => {
+        setTimeout(() => {
+          resolve("Promise_2 resolved completely");
+        }, 5000);
+      });
+
+      async function handlePromises() {
+        console.log("Hello world");
+
+        const val = await p_1;
+        console.log(val);
+        console.log(p_1);
+        console.log("Promise 1 awaited");
+
+        const val2 = await p_2;
+        console.log(val2);
+        console.log(p_2);
+        console.log("Promise 2 awaited");
       }
-      const data = getData();
-      console.log(data);
-      data.then((res) => console.log(res));
+
+      handlePromises();
     </script>
   </body>
 </html>
