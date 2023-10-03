@@ -35,12 +35,23 @@
     // ------------------------------------
 
     //Changing the h1 tag after 2 seconds
+    // function h1Change(){
+    //     document.querySelector('h1').innerHTML = "The h1 tag changed : Best JS Tutorial";
+    // }
+    // setTimeout(h1Change,2000);
+
+    // There should also be need to stop the functionality of the setTimout before its complete of the task.
+    // How to do it?
     function h1Change(){
         document.querySelector('h1').innerHTML = "The h1 tag changed : Best JS Tutorial";
     }
-    setTimeout(h1Change,2000);
+    const changeMe = setTimeout(h1Change,5000); //Saving the refenrece of the setTimeout
+    // clearTimeout(changeMe);
 
-    
+    document.querySelector('#stop').addEventListener("click",()=>{
+        clearTimeout(changeMe);
+        console.log("Clear time out applied")
+    })
     </script>
   </body>
 </html>
