@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async JS Projects</title>
+  </head>
+  <body>
+    <h1>
+      projects with Asyn operation in JS, " Chai aur Code " Youtube channel
+    </h1>
+    <button id="stop">Stop</button>
+    <p>
+      We can observe the window objects and the included function by typing the
+      window keyowrd in the console.
+      Folowing points has been observed:
+      <ul>
+        <li>setTimeout</li>
+        <li>setInterval</li>
+        <li>clearTimeout</li>
+        <li>clearInterval</li>
+      </ul>
+    </p>
+    <script>
+        // setTimeout(function(){
+        //     console.log("setTimeout results in: Abhijit Pramanick")
+        // },2000)
+// ------------------------------------
+// Declaring the function outside, sending the reference the function to the setTimout
+// function sayFunction(){
+    //     console.log("Using the reference of the function, in the setTimeout.")
+    // }
+    // setTimeout(sayFunction,2000);
+    
+    // ------------------------------------
+
+    //Changing the h1 tag after 2 seconds
+    function h1Change(){
+        document.querySelector('h1').innerHTML = "The h1 tag changed : Best JS Tutorial";
+    }
+    setTimeout(h1Change,2000);
+
+    
+    </script>
+  </body>
+</html>
