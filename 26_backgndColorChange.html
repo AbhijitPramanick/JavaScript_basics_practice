@@ -22,13 +22,16 @@
       };
       const startChangeBackgndCol = function () {
         console.log("Starting color change");
-        intervalId = setInterval(() => {
-          document.body.style.backgroundColor = randomColor();
-        }, 500);
+        if (!intervalId) {
+          intervalId = setInterval(() => {
+            document.body.style.backgroundColor = randomColor();
+          }, 500);
+        }
       };
       const stopChangeBackgndCol = function () {
         console.log("Stopped color change");
         clearInterval(intervalId);
+        intervalId = null; // dereferencing the intervalId
       };
       document
         .querySelector("#start")
