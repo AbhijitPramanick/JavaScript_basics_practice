@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Async JS_setInterval</title>
+  </head>
+  <body>
+    <h1>Async Operations revised : Setinterval</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+    <p class="demo">
+      Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias nemo
+      voluptate cupiditate, vel ab repellendus! Non, officiis omnis ab et ipsa
+      voluptates maxime, numquam autem ipsam consectetur amet sint accusamus?
+    </p>
+
+    <script>
+      // setInterval functionality practiced
+      const sayDate = function (str) {
+        console.log(str, Date.now());
+      };
+      let intervalId;
+      document.querySelector("#start").addEventListener("click", () => {
+        console.log("Start the setInterval");
+        intervalId = setInterval(sayDate, 2000, "Abhijit");
+      });
+      document.querySelector("#stop").addEventListener("click", () => {
+        console.log("Stop the setInterval");
+        clearInterval(intervalId);
+      });
+    </script>
+  </body>
+</html>
