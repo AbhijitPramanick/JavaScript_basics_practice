@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FetchApiPractice</title>
+  </head>
+  <body>
+    <h1>Weather API</h1>
+    <script>
+      const API_KEY = "2bea06651fc044cd82f95640230410";
+      const city = "Lucknow";
+      async function fetchWeatherAsyncAwait() {
+        try {
+          const res = await fetch(
+            `https://api.weatherapi.com/v1/current.json?key=${API_KEY}&q=${city}`
+          );
+          if (!res.ok) throw new Error("Fetch operation failed");
+          const data = await res.json();
+          console.log(data);
+          console.log(`City = ${data.location.name}`);
+          console.log(`region = ${data.location.region}`);
+          console.log(`country = ${data.location.country}`);
+          console.log(`lat = ${data.location.lat}`);
+          console.log(`lon = ${data.location.lon}`);
+          console.log(
+            `temperature in degree Celcius = ${data.current.temp_c} deg C`
+          );
+          console.log(`Wind speed(mph) = ${data.current.wind_mph}`);
+          console.log(`Wind direction = ${data.current.wind_dir}`);
+        } catch (error) {
+          console.log(error);
+        }
+      }
+      fetchWeatherAsyncAwait();
+    </script>
+  </body>
+</html>
